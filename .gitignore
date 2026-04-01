@@ -1,0 +1,18 @@
+# PDFs con información sensible
+*.PDF
+*.pdf
+
+# Carpetas de datos
+Grupos/
+Renombrados */
+C6MAN-*/
+
+# Archivos temporales de prueba
+test_*.py
+test_*.png
+ocr_result.txt
+
+# Python
+__pycache__/
+*.pyc
+.env
