@@ -1,6 +1,20 @@
 import os
 import re
 import shutil
+import subprocess
+import sys
+
+def instalar_dependencias():
+    deps = {"fitz": "PyMuPDF", "easyocr": "easyocr"}
+    for modulo, paquete in deps.items():
+        try:
+            __import__(modulo)
+        except ImportError:
+            print(f"Instalando {paquete}...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", paquete])
+
+instalar_dependencias()
+
 import fitz
 import easyocr
 
